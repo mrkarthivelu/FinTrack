@@ -6,14 +6,14 @@ import {Button,Form,FormControl,FormLabel,Row,Col, FormGroup} from 'react-bootst
 const $ = require('jquery');
 
 
-export default class Employee extends React.Component{
+export default class User extends React.Component{
 
     constructor(){
         super();
         this.state={
             
         }
-        this.employeeList=[{type: "User", status: "In Active", password: "fdsfadsfds", userName: "mr.karthivelu@gmail.com", mobileNo: "9952375220"},
+        this.userList=[{type: "User", status: "In Active", password: "fdsfadsfds", userName: "mr.karthivelu@gmail.com", mobileNo: "9952375220"},
         {type: "User", status: "In Active", password: "fdsfadsfds", userName: "mr.karthivelu@gmail.com", mobileNo: "9952375220"},
         {type: "User", status: "In Active", password: "fdsfadsfds", userName: "mr.karthivelu@gmail.com", mobileNo: "9952375220"},
         {type: "User", status: "In Active", password: "fdsfadsfds", userName: "mr.karthivelu@gmail.com", mobileNo: "9952375220"},
@@ -27,7 +27,7 @@ export default class Employee extends React.Component{
     drawTable = ()=>{
         $("#table").DataTable({
             destroy:true,
-            data:this.employeeList,
+            data:this.userList,
         columns:[
             {data:'mobileNo'},
             {data:'userName'},
@@ -48,10 +48,10 @@ export default class Employee extends React.Component{
         //console.log(this.state)
     }
 
-    addEmployee = (e) =>{
+    addUser = (e) =>{
         e.preventDefault();
         console.log(this.state);
-        this.employeeList = [...this.employeeList,this.state];
+        this.userList = [...this.userList,this.state];
         this.drawTable();
         //this.setState();
     }
@@ -60,7 +60,7 @@ export default class Employee extends React.Component{
                <div>
                <div className="text-center"><h1>FinTrack</h1></div>
                <div className="col-sm-6">
-                    <Form className="" onSubmit={this.addEmployee}>
+                    <Form className="" onSubmit={this.addUser}>
                         <Form.Row>
                         <Form.Group as={Col} sm={6}> 
                             <FormLabel className="">Username</FormLabel>

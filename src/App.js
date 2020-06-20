@@ -10,6 +10,7 @@ function App() {
       <BrowserRouter>
         <Route path="/" exact component={Login}></Route>
         <Route path="/home" exact component={Home}></Route>
+        {/* <Route><h1>Page Not Found</h1></Route> */}
       </BrowserRouter>
     </React.Fragment>
   );
